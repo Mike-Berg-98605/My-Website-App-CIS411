@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyWebsiteApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
+                    aria-controls="menu" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <h2>My Website</h2>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Index" asp-controller="Home" asp-area="">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="About" asp-controller="Home" asp-area="">
+                            About The Site
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Contact" asp-controller="Home" asp-area="">
+                            Contacts
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Index" asp-controller="Home"  asp-area="Help">
+                            Help
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+</body>
+</html>
+<footer class="page-footer text-center fixed-bottom">
+    <h3>My Web App 2022, ASP.NET Class</h3>
+</footer>
